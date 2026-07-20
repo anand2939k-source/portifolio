@@ -76,7 +76,7 @@ export default function Navbar() {
 
             {/* Resume Button */}
             <a
-              href="/ANANDK.pdf"
+              href={`${import.meta.env.BASE_URL}ANANDK.pdf`}
               download="ANANDK.pdf"
               className="flex items-center space-x-2 px-4 py-2 rounded border border-cyber-green/40 bg-cyber-green/5 text-cyber-green hover:bg-cyber-green hover:text-cyber-bg font-mono text-xs tracking-wider transition-all duration-300 shadow-[0_0_10px_rgba(0,255,157,0.1)] hover:shadow-[0_0_15px_rgba(0,255,157,0.35)]"
             >
@@ -116,7 +116,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/ANANDK.pdf"
+            href={`${import.meta.env.BASE_URL}ANANDK.pdf`}
             download="ANANDK.pdf"
             onClick={() => setIsOpen(false)}
             className="flex items-center justify-center space-x-2 w-full px-4 py-3 rounded border border-cyber-green bg-cyber-green/10 text-cyber-green font-mono text-sm transition-all duration-200"

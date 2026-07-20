@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Terminal as TerminalIcon, Mail, MapPin, ArrowRight, Play } from 'lucide-react';
+import { Terminal as TerminalIcon, Mail, MapPin, ArrowRight, Play, Download } from 'lucide-react';
 import MatrixRain from './MatrixRain';
 
 export default function Hero() {
@@ -153,6 +153,14 @@ export default function Hero() {
             >
               <span>VIEW_PROJECTS</span>
               <ArrowRight className="w-4 h-4" />
+            </a>
+            <a 
+              href={`${import.meta.env.BASE_URL}ANANDK.pdf`}
+              download="ANANDK.pdf"
+              className="flex items-center space-x-2 px-6 py-3 rounded border border-cyber-green/50 bg-cyber-green/10 text-cyber-green hover:bg-cyber-green hover:text-cyber-bg font-mono text-sm tracking-wider font-semibold transition-all duration-300 shadow-[0_0_15px_rgba(0,255,157,0.15)] hover:shadow-[0_0_20px_rgba(0,255,157,0.4)]"
+            >
+              <Download className="w-4 h-4" />
+              <span>ACCESS_RESUME</span>
             </a>
             <a 
               href="#contact" 

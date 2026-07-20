@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldAlert, User, Cpu, CpuIcon, CheckSquare } from 'lucide-react';
+import { ShieldAlert, User, Cpu, Download } from 'lucide-react';
 
 export default function About() {
   return (
@@ -34,7 +34,7 @@ export default function About() {
               <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-full border border-cyber-border/30 overflow-hidden bg-[#070a10] flex items-center justify-center">
                 {/* Fallback SVG profile or photo */}
                 <img 
-                  src="/PHOTO1.jpeg" 
+                  src={`${import.meta.env.BASE_URL}PHOTO1.jpeg`} 
                   alt="Anand K" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   onError={(e) => {
@@ -44,12 +44,20 @@ export default function About() {
                 />
                 <div className="hidden absolute inset-0 flex items-center justify-center text-slate-600 bg-slate-900 flex-col space-y-2">
                   <User className="w-20 h-20 text-cyber-cyan/50 animate-pulse" />
-                  <span className="font-mono text-[9px] text-cyber-cyan/60 uppercase">UPLOAD_PHOTO_HERE</span>
+                  <span className="font-mono text-[9px] text-cyber-cyan/60 uppercase">PROFILE_IMAGE</span>
                 </div>
               </div>
 
-              <div className="mt-4 font-mono text-[10px] text-slate-500 tracking-wider">
-                SUBJECT: <span className="text-white">PHOTO1.JPEG</span>
+              <div className="mt-4 font-mono text-[10px] text-slate-500 tracking-wider flex items-center justify-between w-full px-2">
+                <span>SUBJECT: <span className="text-white">ANAND_K.JPEG</span></span>
+                <a 
+                  href={`${import.meta.env.BASE_URL}ANANDK.pdf`} 
+                  download="ANANDK.pdf"
+                  className="text-cyber-green hover:text-white flex items-center space-x-1 transition-colors"
+                >
+                  <Download className="w-3 h-3" />
+                  <span>DOWNLOAD_CV</span>
+                </a>
               </div>
             </div>
 
